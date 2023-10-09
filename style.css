@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300&display=swap');
+
+:root{
+    --type-normal: #D39FAC;
+    --type-fire: #FF4B58;
+    --type-water: #82A9FE;
+    --type-grass: #23D750;
+    --type-electric:#FAFF6D;
+    --type-ice:#DEF8FD;
+    --type-fighting: #FC6534;
+    --type-poison:#A269E2;
+    --type-ground:#B0742D;
+    --type-flying:#4E6C82;
+    --type-psychic:#FF1995;
+    --type-bug:#1F4E24;
+    --type-rock:#903F21;
+    --type-ghost:#956997;
+    --type-dark:#5B5A7B;
+    --type-dragon:#44929E;
+    --type-steel:#3CCA9A;
+    --type-fairy:#F71167;
+}
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+    font-family: 'Kanit';
+}
+
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 1rem;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fcd342
+    
+}
+div.class-img{
+    height: 75%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+
+}
+img.pokeball{
+    width: 160px;
+    height: 160px;
+}
+
+div.class-buttom{
+    width: 90%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+button.div-buttom{
+    padding: .4rem;
+    border-radius: 100vmax;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: transparent;
+    transition: .2s;
+    box-shadow: 0 0 1rem gray;
+}
+button.div-buttom:hover{
+    transform: scale(1.1);
+    
+}
+
+button.normal{
+    background-color: var(--type-normal);
+    color: black;
+}
+button.fire{
+    background-color: var(--type-fire);
+    color: black;
+}
+button.water{
+    background-color: var(--type-water);
+    color: black;
+}
+button.grass{
+    background-color: var(--type-grass);
+    color: black;
+}
+button.electric{
+    background-color: var(--type-electric);
+    color: black;
+}
+button.ice{
+    background-color: var(--type-ice);
+    color: black;
+}
+button.fighting{
+    background-color: var(--type-fighting);
+    color: black;
+}
+button.poison{
+    background-color: var(--type-poison);
+    color: black;
+}
+button.ground{
+    background-color: var(--type-ground);
+    color: black;
+}
+button.flying{
+    background-color: var(--type-flying);
+    color: black;
+}
+
+button.psychic{
+    background-color: var(--type-psychic);
+    color: black;
+}
+button.bug{
+    background-color: var(--type-bug);
+    color: black;
+}
+button.rock{
+    background-color: var(--type-rock);
+    color: black;
+}
+button.ghost{
+    background-color: var(--type-ghost);
+    color: black;
+}
+button.dark{
+    background-color: var(--type-dark);
+    color: black;
+}
+button.dragon{
+    background-color: var(--type-dragon);
+    color: black;
+}
+
+button.steel{
+    background-color: var(--type-steel);
+    color: black;
+}
+button.fairy{
+    background-color: var(--type-fairy);
+    color: black;
+}
+
+main{
+padding: 2rem;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+gap: 3rem;
+background-color: #2B6EB6
+}
+
+div.pokemon{
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    border: 2px solid #333;
+    border-radius: 5rem;
+    background-color: white;
+    box-shadow: 0 0 1rem rgb(12, 12, 93)
+    
+    
+}
+img.imagen-pokemon{
+    height: 60%;
+    width: 70%;
+    
+}
+
+h2.nombre-pokemon{
+height: 15%;
+}
+
+button.button-tipo{
+    width: 60px;
+    border-radius: 100vmax;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: transparent;
+    transition: .2s;
+    box-shadow: 0 0 1rem gray;
+}
