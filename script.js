@@ -1,5 +1,5 @@
 const main$$ = document.querySelector('main');
-const botonesTipo = document.querySelectorAll('.div-buttom');
+
 
 const myPokeApi = async () => {
     let allPokemons = [];
@@ -17,7 +17,7 @@ const mapCharacters = (charactersWithMappe) => {
         nombre: character.name,
         imagen: character.sprites.front_default,
         id: character.id,
-        tipos: character.types[0].type.name,
+        tipos: character.types.map((type) => type.type.name).join(', '),
 
     }))
 };
@@ -30,17 +30,21 @@ const drawCharacters = (mappedCharacters) =>{
             <p>${character.id}</p>
             <img class='imagen-pokemon'src="${character.imagen}" alt ="${character.nombre}"/>
             <h2 class='nombre-pokemon'>${character.nombre}</h2>
-            <button class='button-tipo'>${character.tipos}</button>`;
+            <div>
+            <buttom class='button-tipo'>${character.tipos}</buttom>
+            </div>`;
 
         main$$.appendChild(div$$)
 
     }
 }
 
-botonesTipo.forEach(button => button.addEventListener("click", (event) =>{
-    const buttonId = event.currentTarget.id;
+const searchType = (mappedCharacters) =>{
+const botonesTipo = document.querySelectorAll('.div-buttom')
+botonesTipo.addEventListener('click', () => {
     
-}))
+})
+}
 
 const innit = async () => {
 
@@ -50,5 +54,7 @@ const mappedCharacters = mapCharacters(characters);
 
 
 drawCharacters(mappedCharacters);
+
+searchType(mappedCharacters);
 };
 innit()

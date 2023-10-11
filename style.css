@@ -185,11 +185,12 @@ div.pokemon{
     text-align: center;
     border: 2px solid #333;
     border-radius: 5rem;
-    background-color: white;
+    background-image:url(https://c4.wallpaperflare.com/wallpaper/528/835/805/pokemon-poke-balls-artwork-wallpaper-preview.jpg);
+    background-size: cover;
+    background-position: center;
     box-shadow: 0 0 1rem rgb(12, 12, 93)
-    
-    
 }
+
 img.imagen-pokemon{
     height: 60%;
     width: 70%;
