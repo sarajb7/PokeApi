@@ -29,9 +29,11 @@ const drawCharacters = (mappedCharacters) =>{
         div$$.innerHTML = `
             <p>${character.id}</p>
             <img class='imagen-pokemon'src="${character.imagen}" alt ="${character.nombre}"/>
+            <div class='contenedor'>
+            <div class='contenedor-child'>
             <h2 class='nombre-pokemon'>${character.nombre}</h2>
-            <div>
             <buttom class='button-tipo'>${character.tipos}</buttom>
+            </div>
             </div>`;
 
         main$$.appendChild(div$$)
@@ -39,12 +41,12 @@ const drawCharacters = (mappedCharacters) =>{
     }
 }
 
-const searchType = (mappedCharacters) =>{
-const botonesTipo = document.querySelectorAll('.div-buttom')
-botonesTipo.addEventListener('click', () => {
+// const searchType = (mappedCharacters) =>{
+// const botonesTipo = document.querySelectorAll('.div-buttom')
+// botonesTipo.addEventListener('click', () => {
     
-})
-}
+// })
+// }
 
 const innit = async () => {
 
