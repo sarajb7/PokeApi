@@ -27,12 +27,12 @@ const drawCharacters = (mappedCharacters) =>{
         const div$$ = document.createElement('div');
         div$$.classList.add("pokemon")
         div$$.innerHTML = `
-            <p>${character.id}</p>
+            <p class='id-text'>${character.id}</p>
             <img class='imagen-pokemon'src="${character.imagen}" alt ="${character.nombre}"/>
             <div class='contenedor'>
             <div class='contenedor-child'>
             <h2 class='nombre-pokemon'>${character.nombre}</h2>
-            <buttom class='button-tipo'>${character.tipos}</buttom>
+            <p class='button-tipo'>${character.tipos}</p>
             </div>
             </div>`;
 
@@ -41,12 +41,26 @@ const drawCharacters = (mappedCharacters) =>{
     }
 }
 
-// const searchType = (mappedCharacters) =>{
-// const botonesTipo = document.querySelectorAll('.div-buttom')
-// botonesTipo.addEventListener('click', () => {
-    
-// })
-// }
+const searchType = (mappedCharacters) =>{
+const botonesTipo = document.querySelectorAll('.div-buttom');
+botonesTipo.forEach(button => {
+button.addEventListener('click', () => {
+    const tipoPokemon = button.id;
+
+    let pokemonFiltrados = [];
+
+    if(tipoPokemon === 'all'){
+        pokemonFiltrados = mappedCharacters
+    } else {
+      pokemonFiltrados = mappedCharacters.filter(pokemon => pokemon.tipos.includes(tipoPokemon));  
+    }
+
+    main$$.innerHTML = '';
+    drawCharacters(pokemonFiltrados)
+})
+}) 
+};
+
 
 const innit = async () => {
 
