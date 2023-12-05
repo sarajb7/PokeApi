@@ -37,6 +37,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #2B6EB6
 }
 
 header{
@@ -171,6 +172,7 @@ button.fairy{
 }
 
 main{
+height: 100%;
 padding: 2rem;
 display: flex;
 flex-wrap: wrap;
